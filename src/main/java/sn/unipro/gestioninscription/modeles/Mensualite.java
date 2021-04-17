@@ -12,9 +12,9 @@ public class Mensualite {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
-	@Column()
 	@Enumerated(EnumType.STRING)
-	private String mois;
+	@Column
+	private Mois mois;
 	@Column
 	private double montant;
 	@Column
@@ -22,10 +22,10 @@ public class Mensualite {
 	public int getId() {
 		return id;
 	}
-	public String getMois() {
+	public Mois getMois() {
 		return mois;
 	}
-	public void setMois(String mois) {
+	public void setMois(Mois mois) {
 		this.mois = mois;
 	}
 	public double getMontant() {

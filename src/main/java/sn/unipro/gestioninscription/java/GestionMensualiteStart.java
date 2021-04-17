@@ -2,6 +2,7 @@ package sn.unipro.gestioninscription.java;
 
 import sn.gestionInscription.dao.MensualiteDao;
 import sn.unipro.gestioninscription.modeles.Mensualite;
+import sn.unipro.gestioninscription.modeles.Mois;
 
 public class GestionMensualiteStart {
 
@@ -10,7 +11,7 @@ public class GestionMensualiteStart {
 		MensualiteDao mensualitedao =new MensualiteDao();
 		
 		mensualite.setInscriptionId(1);
-		mensualite.setMois("Janvier");
+		mensualite.setMois(Mois.fromCode("jan"));
 		mensualite.setMontant(50000);
 		
 		mensualitedao.save(mensualite);
